@@ -18,10 +18,16 @@ add(int a,int b){
   return sum;
 }
 
-personDetails( {required String name, int age=0, String address=''}){
+personDetails( {required String name, int?age, String address=''}){
+
+
 
   print("My name is $name");
-  print("and Age = $age");
-  print("Address is $address");
+
+  if (age != null) {
+    print("and Age = $age");
+  }
+  if(address.isNotEmpty){
+  print("Address is $address");}
 
 }
